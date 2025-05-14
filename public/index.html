@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/app.css" />
     <link rel="stylesheet" href="./styles/swiper-bundle.min.css" />
-    <link rel="icon" href="./images/svgs/app-logo.svg">
+    <link rel="icon" href="./images/svgs/app-logo.svg" />
   </head>
   <body class="font-Dana bg-gray-100 dark:bg-zinc-800">
     <!--------------- All icons --------------------->
@@ -590,7 +590,10 @@
                   <use xlink:href="#shopping-cart"></use>
                 </svg>
               </section>
-              <span id="basket-counter" class="flex justify-center items-center absolute top-1.5 -left-2.5 rounded-full bg-red-600 w-5 h-5 text-white font-DanaMedium text-sm"></span>
+              <span
+                id="basket-counter"
+                class="flex justify-center items-center absolute top-1.5 -left-2.5 rounded-full bg-red-600 w-5 h-5 text-white font-DanaMedium text-sm"
+              ></span>
               <div
                 class="absolute top-full left-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 w-[400px] max-h-[500px] overflow-y-auto p-5 bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] border-t-orange-300 shadow-main transition-all delay-75"
               >
@@ -685,38 +688,6 @@
         </div>
       </div>
     </header>
-
-    <!-- ************************ -->
-
-    <!-- <div class="pb-6 border-b-[1px] border-gray-100 dark:border-white/10 gap-x-2.5 flex w-full mt-5">
-        <img class="w-[90px] h-[90px] inline-block" src="${product.src}" alt="">
-        <div class="text-zinc-700 dark:text-white font-DanaMedium">
-            <h1 class="leading-6 text-sm mb-6">${product.name}</h1>
-            <div class="flex items-center gap-5 px-3.5 py-4">
-                <div class="flex items-center justify-center gap-3.5 rounded-full h-[44px] w-[90px] border-[1px] text-orange-300 border-gray-300">
-                    <button id="ascendProduct" onclick="ascendProductHandler(${product.id})">
-                        <svg class="w-3 h-3">
-                            <use xlink:href="#plus"></use>
-                        </svg>
-                    </button>
-                    <span id="productCounter" class="font-DanaDemiBold">3</span>
-                    <button id="descendProduct" onclick="descendProductHandler(${product.id})">
-                        <svg class="w-3 h-3">
-                            <use xlink:href="#minus"></use>
-                        </svg>
-                    </button>
-                </div>
-                <div>
-                    <p class="text-teal-600 dark:text-emerald-500 text-xs tracking-tighter leading-6">14500 تومان تخفیف</p>
-                    <h2 class="text-base font-Dana">
-                        <span class="text-sm font-DanaDemiBold">${product.price}</span>تومان
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- ************************* -->
 
     <!-- mobile header -->
     <div
@@ -851,7 +822,10 @@
       <svg class="shopping_cart relative w-8 h-8 text-zinc-700 dark:text-white">
         <use xlink:href="#shopping-cart"></use>
       </svg>
-      <span id="basket-counter" class="flex justify-center items-center absolute left-2.5 top-1.5 rounded-full bg-red-600 w-5 h-5 text-white font-DanaMedium text-sm"></span>
+      <span
+        id="basket-counter"
+        class="flex justify-center items-center absolute left-2.5 top-1.5 rounded-full bg-red-600 w-5 h-5 text-white font-DanaMedium text-sm"
+      ></span>
 
       <!-- shopping basket -->
       <div
@@ -859,38 +833,31 @@
       >
         <!-- basket header -->
         <div class="overflow-y-visible">
-            <div
-          class="cart-body-header flex items-center justify-between pb-5 mb-5 border-b-[1px] border-gray-300 dark:border-white/10"
-        >
-          <div class="basket_close_btn">
-            <svg class="h-5 w-5 text-zinc-600 dark:text-white">
-              <use xlink:href="#X"></use>
-            </svg>
-          </div>
-          <span class="font-DanaMedium text-zinc-700 dark:text-white"
-            >سبد خرید</span
+          <div
+            class="cart-body-header flex items-center justify-between pb-5 mb-5 border-b-[1px] border-gray-300 dark:border-white/10"
           >
-        </div>
+            <div class="basket_close_btn">
+              <svg class="h-5 w-5 text-zinc-600 dark:text-white">
+                <use xlink:href="#X"></use>
+              </svg>
+            </div>
+            <span class="font-DanaMedium text-zinc-700 dark:text-white"
+              >سبد خرید</span
+            >
+          </div>
 
-        <div id="empty-shopping-cart-mobile" class="flex flex-col justify-center items-center gap-4 mt-4">
+          <div
+            id="empty-shopping-cart-mobile"
+            class="flex flex-col justify-center items-center gap-4 mt-4"
+          >
             <svg class="w-12 h-12 text-zinc-700 dark:text-white">
-                <use xlink:href="#sad"></use>
+              <use xlink:href="#sad"></use>
             </svg>
-            <span class="text-zinc-700 dark:text-white">سبد خرید شما خالی می‌باشد !</span>
+            <span class="text-zinc-700 dark:text-white"
+              >سبد خرید شما خالی می‌باشد !</span
+            >
+          </div>
         </div>
-        </div>
-
-        <!-- user basket items -->
-        <!-- <div class="pb-6 border-b-[1px] border-gray-100 dark:border-white/10 gap-x-2.5 flex w-full mt-5">
-                <img class="w-[90px] h-[90px] inline-block" src="./images/products/p3.png" alt="">
-                <div class="text-zinc-700 dark:text-white font-DanaMedium">
-                    <h1 class="leading-6 text-sm mb-6">قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی</h1>
-                    <p class="text-teal-600 dark:text-emerald-500 text-xs tracking-tighter leading-6">14500 تومان تخفیف</p>
-                    <h2 class="text-base font-Dana">
-                        <span class="text-sm font-DanaDemiBold">175,000</span>تومان
-                    </h2>
-                </div>
-            </div> -->
 
         <!-- basket footer -->
         <div id="total-sale-mobile-container" class="flex items-end gap-x-4">
@@ -992,60 +959,7 @@
         <div id="shopping-section" class="mt-5 md:mt-12">
           <div
             class="products-wrapper container grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 grid-rows-2 gap-3.5 md:gap-5 child:rounded-2xl child:max-w-[300px] child:h-467px"
-          >
-            <!-- <div class="flex flex-col justify-center bg-white dark:bg-zinc-700 shadow-normal p-5">
-                        <img class="max-w-[260px] max-h-[260px]" src="./images/products/p1.png" alt="">
-                        <span class="font-DanaMedium text-zinc-700 dark:text-white text-xl">قهوه ترک بن مانو مقدار 250 گرم
-                            خط دوم اسم طولانی</span>
-                        <div class="mt-1.5 mb-2.5 md:mb-[22px] md:mt-2.5 text-teal-600 dark:text-emerald-500">
-                            <span class="font-DanaDemiBold text-base md:text-xl">175,000</span>
-                            <span class="font-Dana text-xs md:text-sm tracking-tighter">تومان</span>
-                        </div>
-    
-                     
-                        <div class="flex justify-between">
-                            <div class="flex items-center gap-x-3">
-                                <a href="" class="flex justify-center items-center rounded-full w-[26px] h-[26px] md:w-9 md:h-9 bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 dark:hover:bg-emerald-500 child:hover:text-white transition-colors">
-                                    <svg class="h-4 w-4 md:h-[22px] md:w-[22px] text-gray-400">
-                                        <use xlink:href="#shopping-cart"></use>
-                                    </svg>
-                                </daiav>
-                                <a href="">
-                                    <svg class="h-4 w-4 md:h-6 md:w-6 text-gray-400 hover:text-teal-600 dark:hover:bg-emerald-500 transition-colors">
-                                        <use xlink:href="#arrows-right-left"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="flex items-center child:w-6 child:h-6" id="starContainer">
-                                <a href="#" class="star" data-index="1">
-                                    <svg class="h-4 w-4 md:h-6 md:w-6">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                </a>
-                                <a href="#" class="star" data-index="2">
-                                    <svg class="h-4 w-4 md:h-6 md:w-6">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                </a>
-                                <a href="#" class="star" data-index="3">
-                                    <svg class="h-4 w-4 md:h-6 md:w-6">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                </a>
-                                <a href="#" class="star" data-index="4">
-                                    <svg class="h-4 w-4 md:h-6 md:w-6">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                </a>
-                                <a href="#" class="star" data-index="5">
-                                    <svg class="h-4 w-4 md:h-6 md:w-6">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div> -->
-          </div>
+          ></div>
         </div>
       </section>
 
@@ -1637,7 +1551,7 @@
       >
         <use xlink:href="#curve"></use>
       </svg>
-      
+
       <a
         href=""
         class="circle circle_smaller absolute top-[-30px] left-0 right-0 mx-auto translate-y-2/4"
@@ -1802,7 +1716,9 @@
                 <span>021-6789012</span>
               </div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-1.5 md:gap-6 mt-4 md:mt-10">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-1.5 md:gap-6 mt-4 md:mt-10"
+            >
               <div class="group">
                 <a
                   class="inline-flex justify-center items-center gap-2 rounded-xl px-[30px] py-1 border-[1px] border-orange-200 text-orange-200 group-hover:bg-gradient-to-r from-orange-200 to-orange-300 group-hover:text-zinc-700 transition-colors"

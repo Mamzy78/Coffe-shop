@@ -17,14 +17,12 @@ const totalSaleContainer = $.querySelectorAll(".total-sale")
 let emptyShoppingCartMobile = $.querySelector("#empty-shopping-cart-mobile")
 let totalSaleMobileContainer = $.querySelector("#total-sale-mobile-container")
 const basketCounterSpan = $.querySelectorAll("#basket-counter")
-
-
-
 const productsContainer = $.querySelector(".products-wrapper")
 const topProductsContainer = $.querySelector(".swiper-wrapper")
 let userBasketCounter = $.querySelector(".userBasketCounter")
 
-let products = [
+
+let totalProducts = [
     {id: 1, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p1.png", price:150_000, count:0, off:15_000},
     {id: 2, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p2.png", price:175_000, count:0, off:20_000},
     {id: 3, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p3.png", price:200_000, count:0, off:45_000},
@@ -32,22 +30,17 @@ let products = [
     {id: 5, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p4.png", price:190_000, count:0, off:40_000},
     {id: 6, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p3.png", price:180_000, count:0, off:25_000},
     {id: 7, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p1.png", price:300_000, count:0, off:30_000},
-    {id: 8, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p2.png", price:160_000, count:0, off:17_000}
+    {id: 8, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p2.png", price:160_000, count:0, off:17_000},
+    {id: 9, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p5.png", price:150_000, count:0, off:17_000},
+    {id: 10, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p6.png", price:175_000, count:0, off:17_000},
+    {id: 11, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p7.png", price:150_000, count:0, off:17_000},
+    {id: 12, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p8.png", price:150_000, count:0, off:17_000},
+    {id: 13, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p4.png", price:150_000, count:0, off:17_000},
+    {id: 14, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p3.png", price:150_000, count:0, off:17_000},
+    {id: 15, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p1.png", price:150_000, count:0, off:17_000}
 ]
 
-
-
-let topSalesProducts = [
-    {id: 1, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p5.png", price:150_000},
-    {id: 2, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p6.png", price:175_000},
-    {id: 3, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p7.png", price:150_000},
-    {id: 4, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p8.png", price:150_000},
-    {id: 5, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p4.png", price:150_000},
-    {id: 6, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p3.png", price:150_000},
-    {id: 7, name: " قهوه ترک بن مانو مقدار 250 گرمی خط دوم اسم طولانی ", src: "./images/products/p1.png", price:150_000}
-]
-
-products.forEach(product => {
+totalProducts.slice(0,8).forEach(product => {
     productsContainer.insertAdjacentHTML("beforeEnd", `<div class="flex flex-col justify-center shadow-main bg-white dark:bg-zinc-700 shadow-normal p-5">
                     <img class="max-w-[260px] max-h-[260px] mb-2 md:mb-5" src="${product.src}" alt="">
                     <span class="font-DanaMedium text-zinc-700 dark:text-white text-sm md:text-xl line-clamp-2">${product.name}</span>
@@ -101,7 +94,7 @@ products.forEach(product => {
                 </div>`)
 })
 
-topSalesProducts.forEach(product => {
+totalProducts.slice(9).forEach(product => {
     topProductsContainer.insertAdjacentHTML("beforeend",`<div class="swiper-slide">
                     <div class="flex flex-col justify-center shadow-main rounded-2xl bg-white dark:bg-zinc-700 shadow-normal p-5">
                         <img class="max-w-[260px] max-h-[260px] mb-2 md:mb-5" src="${product.src}" alt="">
@@ -114,7 +107,7 @@ topSalesProducts.forEach(product => {
                         <!----------------- star and buy container --------->
                         <div class="products-wrapper flex flex-wrap gap-1 justify-between">
                             <div class="flex items-center gap-x-3">
-                                <a href="" class="flex justify-center items-center rounded-full w-[26px] h-[26px] md:w-9 md:h-9 bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 dark:hover:bg-emerald-500 child:hover:text-white transition-colors">
+                                <a data-id="${product.id}" href="" class="buy-button flex justify-center items-center rounded-full w-[26px] h-[26px] md:w-9 md:h-9 bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 dark:hover:bg-emerald-500 child:hover:text-white transition-colors">
                                     <svg class="h-4 w-4 md:h-[22px] md:w-[22px] text-gray-400">
                                         <use xlink:href="#shopping-cart"></use>
                                     </svg>
@@ -160,28 +153,22 @@ topSalesProducts.forEach(product => {
 function starHandler(event) {
     event.preventDefault();
 
-    // Get the clicked star's index
     const clickedStar = event.currentTarget;
     const starIndex = parseInt(clickedStar.getAttribute('data-index'));
 
-    // Get the parent container of the stars
     const starContainer = clickedStar.parentNode;
 
-    // Update each star's color based on its index relative to the clicked star
     Array.from(starContainer.children).forEach((star, index) => {
         const starSvg = star.querySelector('svg');
         
         if (index < starIndex) {
-            // Set color to yellow for stars up to the clicked star
             starSvg.style.color = 'rgba(250, 204, 21, 1)';
         } else {
-            // Reset color for stars beyond the clicked star
             starSvg.style.color = 'rgba(209, 213, 219, 1)';
         }
     });
 }
 
-// After rendering products (e.g., after all `insertAdjacentHTML` calls)
 document.querySelectorAll('.star').forEach(star => {
   star.addEventListener('click', starHandler);
 });
@@ -198,7 +185,7 @@ function buyproductHandler(e) {
     let button = e.currentTarget;
     let productID = button.dataset.id;
 
-    let choosenProduct = products.find(product => product.id == productID);
+    let choosenProduct = totalProducts.find(product => product.id == productID);
     let existingProduct = userBasket.find(product => product.id == productID);
 
     if (existingProduct) {
@@ -210,10 +197,7 @@ function buyproductHandler(e) {
 
     localStorage.setItem('userBasket', JSON.stringify(userBasket));
 
-    // Update the basket counter
     showUserBasketLenght()
-
-    // Render the updated cart
     renderCart(userBasket);
 }
 
@@ -288,7 +272,6 @@ function removeOverlay () {
     overlaySection.classList.remove("overlay_visible")
 }
 
-// Function to handle star clicks and update star colors
 
 
 function downPageHandler(e) {
@@ -313,10 +296,7 @@ function upPageHandler(e) {
 }
 
 
-
-// Function to render the cart UI
 function renderCart(userBasket) {
-    // پاکسازی محتوا قبل از رندر مجدد
     document.querySelectorAll('.cart-item').forEach(item => item.remove());
 
     if (userBasket.length) {
@@ -441,10 +421,8 @@ function showUserBasket() {
 
 }
 
-// Add event listener for window resize
 window.addEventListener('resize', showUserBasket);
 
-// Initial render
 document.addEventListener('DOMContentLoaded', showUserBasket);
 document.addEventListener('DOMContentLoaded', showUserBasketLenght);
 
